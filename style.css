@@ -1,0 +1,377 @@
+*{
+    padding: 0;
+    margin: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: #121212;
+}
+header{
+    background-color: black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    position: -webkit-sticky; 
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.logo{
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.search-input{
+    width: 30%;
+    height: 55%;
+    border-radius: 10px;
+    padding: 6px;
+   
+}
+
+.ham-menu {
+    display: inline-block;
+    position: relative;
+    margin: 35px 0px; /* Adjust margin as needed */
+    width: 2%;
+    height: 4px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: white;
+  }
+  .ham-menu::before,
+  .ham-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+  }
+  .ham-menu::before {
+    bottom: 200%;
+  }
+  .ham-menu::after {
+    top: 200%;
+  }
+  
+  .location{
+    margin-left: 5%;
+    cursor: pointer;
+ 
+  }
+  .address{
+   font-size: 60%;
+   font-weight: 800;
+   position: relative;
+   margin-left: -6%;
+   cursor: pointer;
+  }
+
+
+  @media screen and (max-width: 770px) {
+   .location{
+    width: 5%;
+   }
+   .contact{
+    width: 4%;
+   }
+   .cart{
+    width: 8%;
+   }
+   
+    header{
+      height: 20%;
+    }
+    .search-input{
+    
+      position: relative;
+      margin-left: -35%;
+      margin-top: 15%;
+    }
+ 
+  }
+
+  @media screen and (max-width: 1450px) {
+    .menu{
+        display: none;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .caption{
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .ham-menu{
+        position: absolute;
+        left: 2%;
+       
+        margin: 35px 0px; /* Adjust margin as needed */
+        width: 5%;
+        height: 4px;
+        border-radius: 7px;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        color: white;
+    }
+
+    .caption{
+      font-size: 6px;
+    }
+  
+  }
+.button{
+    font-size: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    margin-top: -22%;
+    margin-left: 0.5%;
+}
+
+
+.button:hover{
+    background-color:rgba(37,37,37,.3)!important ;
+    border-color:rgba(37,37,37,.3)!important;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 50px;
+    display: flex;
+
+}
+
+.button1{
+    font-size: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    margin-top: -22%;
+   margin-left: 96.5%;
+   justify-content: center;
+   
+}
+
+.button1:hover{
+    background-color:rgba(37,37,37,.3)!important ;
+    border-color:rgba(37,37,37,.3)!important;
+    width: 50px;
+    display: flex;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+
+}
+
+.button2:hover{
+    background-color: rgba(37,37,37,.3)!important;
+    border-color: rgba(37,37,37,.3)!important;
+   width: 40px;
+   display: flex;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  
+  margin: 0 auto;
+  overflow: hidden;
+  border: 0px solid #ccc;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background: white;
+}
+
+.slider {
+  width: 100%;
+  
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+cursor: pointer;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+
+ 
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.caption {
+  position: absolute;
+left: 47%;
+top: 20%;
+
+  color: white;
+}
+
+.caption h2 {
+  margin: 0;
+  font-size: 380%;
+}
+
+.caption p {
+  margin: 5px 0;
+  font-size: 200%;
+  
+}
+
+.caption button {
+  background-color: #00aaff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+.caption button:hover {
+  background-color: #0077cc;
+}
+
+
+
+
+/* last padding */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.footer-container h3 {
+  margin-top: 0;
+}
+
+.connect, .useful-links, .products {
+  flex: 1;
+}
+
+.connect input[type="email"] {
+  padding: 10px;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+ width:30px;
+ height: 30px;
+}
+
+
+.useful-links ul, .products ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.useful-links ul li, .products ul li {
+  margin: 5px 0;
+ 
+}
+
+.useful-links ul li a, .products ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.useful-links ul li a:hover, .products ul li a:hover {
+  text-decoration: underline;
+  text-decoration: none;
+ color: greenyellow;
+
+}
+
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
